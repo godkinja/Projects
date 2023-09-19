@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator JS</title>
+    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+
+    <div class="bg-gray-300 mt-3 p-8 w-50 rounded shadow-lg">
+
+        <div class="relative mb-2 p-2 text-right w-full border">
+            <input type="text" id="result" class="w-full h-full border-none outline-none pr-8" readonly>
+            <button class="absolute top-0 right-0 h-full w-8 bg-gray-200 text-gray-700 rounded-r-lg hover:bg-gray-300" onclick="clearDisplay()">C</button>
+          </div>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="col-span-1 border" onclick="appendCharacter('7')">7</button>
+            <button class="col-span-1 border" onclick="appendCharacter('8')">8</button>
+            <button class="col-span-1 border" onclick="appendCharacter('9')">9</button>
+            <button class="col-span-1 border" onclick="appendCharacter('/')">/</button>
+
+            <button class="col-span-1 border" onclick="appendCharacter('4')">4</button>
+            <button class="col-span-1 border" onclick="appendCharacter('5')">5</button>
+            <button class="col-span-1 border" onclick="appendCharacter('6')">6</button>
+            <button class="col-span-1 border" onclick="appendCharacter('*')">*</button>
+
+            <button class="col-span-1 border" onclick="appendCharacter('1')">1</button>
+            <button class="col-span-1 border" onclick="appendCharacter('2')">2</button>
+            <button class="col-span-1 border" onclick="appendCharacter('3')">3</button>
+            <button class="col-span-1 border" onclick="appendCharacter('-')">-</button>
+
+            <button class="col-span-1 border" onclick="appendCharacter('0')">0</button>
+            <button class="col-span-1 border" onclick="appendCharacter('.')">.</button>
+            <button class="col-span-1 border" onclick="calculateResult()">=</button>
+            <button class="col-span-1 border" onclick="appendCharacter('+')">+</button>
+
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
